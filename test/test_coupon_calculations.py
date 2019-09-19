@@ -28,6 +28,25 @@ class MyTestCase(unittest.TestCase):
     def test_price_under_10_test_6(self):
         self.assertEqual(cc.calculate_order(4, 10.00, .20), 0.86)
 
+    # Test Set 2
+    def test_price_under_between_ten_thirty_test_1(self):
+        self.assertEqual(cc.calculate_order(29.99, 5.00, .10), 31.79)
+
+    def test_price_under_between_ten_thirty_test_2(self):
+        self.assertEqual(cc.calculate_order(20.00, 5.00, .15), 21.46)
+
+    def test_price_under_between_ten_thirty_test_3(self):
+        self.assertEqual(cc.calculate_order(10.00, 5.00, .20), 10.19)
+
+    def test_price_under_between_ten_thirty_test_4(self):
+        self.assertEqual(cc.calculate_order(29.99, 10.00, .10), 27.02)
+
+    def test_price_under_between_ten_thirty_test_5(self):
+        self.assertEqual(cc.calculate_order(15.00, 10.00, .15), 10.46)
+
+    def test_price_under_between_ten_thirty_test_6(self):
+        self.assertEqual(cc.calculate_order(10.00, 10.00, .20), 5.95)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -17,13 +17,13 @@ def calculate_order(price, cash_coupon, percent_coupon):
     total_after_tax = total_after_percent_coupon + total_to_add_to_tax
     if total_after_tax < 10.00:
         total = total_after_tax + UP_TO_TEN_DOLLARS
-    return round(total, 2)
+        return round(total, 2)
 
 
 if __name__ == '__main__':
-    item_price = 25.00
-    cash_coup = 5.00
-    percent_coup = .10
+    item_price = 00.00
+    cash_coup = 00.00
+    percent_coup = .00
     grand_total = calculate_order(item_price, cash_coup, percent_coup)
 
     print(grand_total)
