@@ -9,6 +9,7 @@ def calculate_order(price, cash_coupon, percent_coupon):
     TAX = 0.06
     # shipping rates
     UP_TO_TEN_DOLLARS = 5.95
+    TEN_DOLLARS_AND_UP_TO_THIRTY_DOLLARS = 7.95
 
     total_after_cash_coupon = price - cash_coupon
     total_of_percent_off = total_after_cash_coupon * percent_coupon
@@ -17,7 +18,9 @@ def calculate_order(price, cash_coupon, percent_coupon):
     total_after_tax = total_after_percent_coupon + total_to_add_to_tax
     if total_after_tax < 10.00:
         total = total_after_tax + UP_TO_TEN_DOLLARS
-        return round(total, 2)
+    elif total_after_tax >= 10.00 or total_after_tax < 30.00:
+        total = total_after_tax + TEN_DOLLARS_AND_UP_TO_THIRTY_DOLLARS
+    return round(total, 2)
 
 
 if __name__ == '__main__':
