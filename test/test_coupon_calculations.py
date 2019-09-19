@@ -49,10 +49,10 @@ class MyTestCase(unittest.TestCase):
 
     # Test Set 3
     def test_price_under_between_thirty_fifty_test_1(self):
-        self.assertEqual(cc.calculate_order(49.99, 5.00, .10), 50.87)
+        self.assertEqual(cc.calculate_order(49.99, 5.00, .10), 54.87)
 
     def test_price_under_between_thirty_fifty_test_2(self):
-        self.assertEqual(cc.calculate_order(40.00, 5.00, .15), 39.48)
+        self.assertEqual(cc.calculate_order(40.00, 5.00, .15), 43.48)
 
     def test_price_under_between_thirty_fifty_test_3(self):
         self.assertEqual(cc.calculate_order(30.00, 5.00, .20), 29.15)
@@ -64,7 +64,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(cc.calculate_order(30.00, 10.00, .15), 25.97)
 
     def test_price_under_between_thirty_fifty_test_6(self):
-        self.assertEqual(cc.calculate_order(49.99, 10.00, .20), 41.86)
+        self.assertEqual(cc.calculate_order(49.99, 10.00, .20), 45.86)
 
 
 if __name__ == '__main__':
